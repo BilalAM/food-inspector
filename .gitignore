@@ -29,5 +29,9 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+/postgres_orchestrator_data/**
+/rabbitmq_data/**
+rabbitmq_logs/**
+
 ### VS Code ###
 .vscode/

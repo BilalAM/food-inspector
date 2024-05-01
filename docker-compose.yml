@@ -1,0 +1,26 @@
+version: '3'
+services:
+  postgres-food:
+    image: postgres:15
+    container_name: postgres-food
+    environment:
+      POSTGRES_DB: food
+      POSTGRES_USER: food
+      POSTGRES_PASSWORD: eatme1000
+    volumes:
+      - ./postgres_orchestrator_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: food
+      RABBITMQ_DEFAULT_PASS: eatme1000
+    volumes:
+      - ./rabbitmq_data:/var/lib/rabbitmq
+      - ./rabbitmq_logs:/var/log/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"

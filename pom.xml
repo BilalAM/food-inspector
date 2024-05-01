@@ -16,6 +16,7 @@
     <description>food-inspection</description>
 
     <modules>
+        <module>shared-module</module>
         <module>food-intake</module>
         <module>food-ingestor</module>
     </modules>

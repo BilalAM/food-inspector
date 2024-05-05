@@ -17,7 +17,6 @@ public class Inspection {
     private Long id;
 
     private LocalDate inspectionDate;
-    private String inspector;
     private boolean hasCriticalViolations;
     private String violations;
 

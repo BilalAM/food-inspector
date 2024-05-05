@@ -12,6 +12,7 @@ public class Facility {
     @Id
     @GeneratedValue
     private Long id;
+    private String facilityUniqueId;
 
     @OneToOne
     private Inspection inspections;
